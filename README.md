@@ -11,7 +11,7 @@ This was a `single day sprint` challenge where I built out a `random group gener
 - Click :point_right: [here](#desktop-preview) to scroll down to a preview of the task tracking app in action or check the status badge above to view the deployed website.
 
 > [!NOTE]  
-> The project focused on functionality first, meeting the client's requirements, and supplying a working product prior to the deadline. There is opportunity to improve the design and responsiveness, if desired. 
+> The project focused on functionality first, meeting the client's requirements, and supplying a working product prior to the deadline. There is opportunity to improve the UI & UX design and responsiveness, if desired. 
 
 
 Requirements:
