@@ -13,9 +13,6 @@ let nameContainer = document.getElementById("nameContainer");
 let modalGroupsDiv = document.getElementById("modalGroupsDiv");
 const modal = document.getElementById('modalGroups');
 
-// JavaScript Global Variables
-// let nameCount = 0;
-
 // Creating Name Elements Function
 function createNameTable(name) {
     let rowDiv = document.createElement('div');
@@ -135,19 +132,6 @@ function populateModal() {
         console.log(test);
         groupsArr = createEmptyArrays(groupNum);
         console.log(groupsArr);
-        // if (nameTotal % groupNum !== 0) {
-        //     let newGroupSize = groupNum;
-        //     // Adjust new group size to the next highest divisor
-        //     while (nameTotal % newGroupSize !== 0) {
-        //         newGroupSize++;
-        //     }
-        //     let groups = newGroupSize;
-        //     groupsArr = createEmptyArrays(groups);
-        // } else {
-        //     groupsArr = createEmptyArrays(groups);
-        // }
-
-
     }
 
     shuffledNames.forEach((name, index) => {
@@ -169,44 +153,16 @@ generateBtn.addEventListener('click', () => {
 });
 
 // Rerun when Modal Closes
-// Add an event listener to the modal when it is hidden
 modal.addEventListener('hidden.bs.modal', function () {
-    // Run your code here when the modal is closed
     populate();
-    // Add your event listener code here
 });
-
-// Split into Even Groups
-// function splitGroups(input) {
-//     let groupSize = input;
-//     if (nameTotal % groupSize == 0) {
-//         let groups = nameTotal / groupSize;
-//         return createEmptyArrays(groups);
-//     } else {
-//         let remainder = nameTotal % groupSize;
-//         let newGroupSize = groupSize - remainder;
-//         let groups = nameTotal % newGroupSize;
-//         return createEmptyArrays(groups);
-//     }
-// }
-
-// Check Group Inputs - Data Validation (dont need anymore!)
-// function groupDataValidation(string){
-//     let results = parseInt(string);
-//     if(!results){
-//         invalidAlert.className = "d-block";
-//     }
-//     return results;
-// }
 
 // One Input Only
 inputGroupSize.addEventListener('input', function () {
-    // If the user types in inputBox1, clear the content of inputBox2
     inputGroupNum.value = '0';
 });
 
 inputGroupNum.addEventListener('input', function () {
-    // If the user types in inputBox2, clear the content of inputBox1
     inputGroupSize.value = '0';
 });
 
@@ -220,11 +176,10 @@ inputGroupNum.addEventListener("keydown", e => e.preventDefault());
 // allow up/down keyboard cursor buttons (doesnt work!)
 // inputGroupSize.addEventListener("keydown", e => e.keyCode != 38 && e.keyCode != 40 && e.preventDefault());
 
-
+// Create Empty Arrays
 function createEmptyArrays(n) {
     return Array.from({ length: n }, () => []);
 }
-
 
 // Fisher-Yates Sorting Algorithm
 // This algorithm's basic premise is to iterate over the items, swapping each element in the array with a randomly selected element from the remaining un-shuffled portion of the array.
